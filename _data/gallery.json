@@ -1,0 +1,362 @@
+{
+  "albums": [
+    {
+      "id": "tilicho-lake",
+      "title": "Tilicho Lake",
+      "description": "Collection of photos of Tilicho Lake",
+      "category": "travel",
+      "coverImage": "/images/tilicho/tilicho-lake.jpg",
+      "featured": true,
+      "photos": [
+        {
+          "url": "/images/tilicho/tilicho-lake.jpg",
+          "alt": "Tilicho lake",
+          "caption": "#"
+        },
+        {
+          "url": "/images/tilicho/tilicho-3.jpg",
+          "alt": "Tilicho lake",
+          "caption": "#"
+        },
+        {
+          "url": "/images/tilicho/tilicho-4.jpg",
+          "alt": "Tilicho lake",
+          "caption": "#"
+        },
+        {
+          "url": "/images/tilicho/tilicho-5.jpg",
+          "alt": "Tilicho lake",
+          "caption": "#"
+        },
+        {
+          "url": "/images/tilicho/tilicho-6.jpg",
+          "alt": "Tilicho lake",
+          "caption": "#"
+        },
+        {
+          "url": "/images/tilicho/tilicho-7.jpg",
+          "alt": "Tilicho lake",
+          "caption": "#"
+        }
+      ]
+    },
+    {
+      "id": "Y2K",
+      "title": "Y2K for Tsabinz",
+      "description": "Product shoot for Tsabinz with Dan",
+      "category": "memes",
+      "coverImage": "/images/Y2K/y2kcover.jpg",
+      "featured": false,
+      "photos": [
+        {
+          "url": "/images/Y2K/y2k-1.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-2.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-3.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-4.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-6.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-7.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-8.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-9.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-10.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-12.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-13.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Y2K/y2k-14.jpg",
+          "alt": "Base Camp View"
+        }
+        
+      ]
+    },
+
+    {
+      "id": "Swimwear",
+      "title": "Swimwear for Tsabinz",
+      "description": "Product shoot for Tsabinz Swim",
+      "category": "Fashion",
+      "coverImage": "/images/swimwear/swimwear-cover.jpg",
+      "featured": true,
+      "photos": [
+        {
+          "url": "/images/swimwear/upashna-1.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/swimwear/upashna-2.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/swimwear/upashna-3.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/swimwear/upashna-4.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/swimwear/upashna-5.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/swimwear/upashna-6.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/swimwear/upashna-7.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/swimwear/upashna-8.jpg",
+          "alt": "Base Camp View"
+        }
+        
+      ]
+    },
+
+    {
+      "id": "Shirt",
+      "title": "Floral Shirt for Tsabinz",
+      "description": "Product shoot for Tsabinz Swim",
+      "category": "Fashion",
+      "coverImage": "/images/Shirt/Shirt-cover.jpg",
+      "featured": false,
+      "photos": [
+        {
+          "url": "/images/Shirt/Shirt-1.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Shirt/Shirt-8.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Shirt/Shirt-3.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Shirt/Shirt-4.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Shirt/Shirt-5.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Shirt/Shirt-6.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/Shirt/Shirt-7.jpg",
+          "alt": "Base Camp View"
+        }
+        
+      ]
+    },
+
+    {
+      "id": "Streetwear",
+      "title": "Streetwear for Tsabinz",
+      "description": "Product shoot for Tsabinz Swim",
+      "category": "Fashion",
+      "coverImage": "/images/Streetwear/sw-cover.jpg",
+      "featured": false,
+      "photos": [
+        {
+          "url": "/images/swimwear/upashna-1.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/swimwear/upashna-2.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/swimwear/upashna-3.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/swimwear/upashna-4.jpg",
+          "alt": "Base Camp View"
+        }
+        
+      ]
+    },
+
+    {
+      "id": "Dimsum",
+      "title": "Dimsum",
+      "description": "Food photography for Bao Xuan",
+      "category": "Food",
+      "coverImage": "/images/dimsum/dimsum-1.jpg",
+      "featured": false,
+      "photos": [
+        {
+          "url": "/images/dimsum/dimsum-1.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/dimsum/dimsum-2.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/dimsum/dimsum-3.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/dimsum/dimsum-4.jpg",
+          "alt": "Base Camp View"
+        },
+        {
+          "url": "/images/dimsum/dimsum-5.jpg",
+          "alt": "Base Camp View"
+        }
+        
+      ]
+    },
+
+    {
+      "id": "Pullover",
+      "title": "Pullover",
+      "description": "Pullover",
+      "category": "Product",
+      "coverImage": "/images/pullover/pullover-cover.jpg",
+      "featured": false,
+      "photos": [
+        {
+          "url": "/images/pullover/pullover-1.jpg",
+          "alt": "Beige Pullover"
+        },
+        {
+          "url": "/images/pullover/pullover-2.jpg",
+          "alt": "Pullovers"
+        },
+        {
+          "url": "/images/pullover/pullover-3.jpg",
+          "alt": "Pullovers"
+        },
+        {
+          "url": "/images/pullover/pullover-4.jpg",
+          "alt": "Pullovers close up"
+        },
+        {
+          "url": "/images/pullover/pullover-5.jpg",
+          "alt": "Blue Pullover"
+        },
+        {
+          "url": "/images/pullover/pullover-6.jpg",
+          "alt": "Blue and black pullover"
+        },
+        {
+          "url": "/images/pullover/pullover-7.jpg",
+          "alt": "Blue and black pullover"
+        },
+        {
+          "url": "/images/pullover/pullover-8.jpg",
+          "alt": "Pullovers"
+        }
+        
+      ]
+    },
+
+    {
+      "id": "Lassi",
+      "title": "Lassi at Soaltee",
+      "description": "Photoshoot for lassi festival at Soaltee",
+      "category": "Product",
+      "coverImage": "/images/lassi/lassi-cover.jpg",
+      "featured": true,
+      "photos": [
+        {
+          "url": "/images/lassi/lassi-1.jpg",
+          "alt": "Assorted flavors of lassi"
+        },
+        {
+          "url": "/images/lassi/lassi-5.jpg",
+          "alt": "Assorted flavors of lassi"
+        },
+        {
+          "url": "/images/lassi/lassi-6.jpg",
+          "alt": "Assorted flavors of lassi"
+        },
+        {
+          "url": "/images/lassi/lassi-7.jpg",
+          "alt": "Assorted flavors of lassi"
+        }
+        
+      ]
+    },
+
+    {
+      "id": "Skate",
+      "title": "Skatewear Drop",
+      "description": "Skate. Street. Style",
+      "category": "Fashion",
+      "coverImage": "/images/skate/skate-cover.jpg",
+      "featured": false,
+      "photos": [
+        {
+          "url": "/images/skate/skate-1.jpg",
+          "alt": "Skatewear Shoot"
+        },
+        {
+          "url": "/images/skate/skate-2.jpg",
+          "alt": "Skatewear Shoot"
+        },
+        {
+          "url": "/images/skate/skate-3.jpg",
+          "alt": "Skatewear Shoot"
+        },
+        {
+          "url": "/images/skate/skate-4.jpg",
+          "alt": "Skatewear Shoot"
+        },
+        {
+          "url": "/images/skate/skate-5.jpg",
+          "alt": "Skatewear Shoot"
+        },  
+        {
+          "url": "/images/skate/skate-6.jpg",
+          "alt": "Skatewear Shoot"
+        },  
+        {
+          "url": "/images/skate/skate-7.jpg",
+          "alt": "Skatewear Shoot"
+        },    
+        {
+          "url": "/images/skate/skate-9.jpg",
+          "alt": "Skatewear Shoot"
+        }
+      ]
+    }
+  ]
+}

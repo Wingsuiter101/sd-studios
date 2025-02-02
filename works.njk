@@ -1,0 +1,56 @@
+---
+layout: layouts/base
+title: works
+---
+<section id="works" class="works-section">
+    <div class="container">
+        <h1 class="works-title">My Works</h1>
+        <p class="works-description">Explore all my creative projects, from branding to web design.</p>
+
+        <!-- Filter Buttons -->
+        <div class="filters-container">
+            <button class="filter-btn active" data-filter="all">All</button>
+            {% set categories = [] %}
+            {% for project in projects %}
+                {% if not (project.category in categories) %}
+                    {% set categories = categories.concat([project.category]) %}
+                {% endif %}
+            {% endfor %}
+            {% for category in categories %}
+                <button class="filter-btn" data-filter="{{ category }}">{{ category }}</button>
+            {% endfor %}
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="works-grid">
+            {% for project in projects %}
+            <div class="works-item" data-category="{{ project.category }}">
+                <div class="works-item-inner">
+                    <div class="works-image">
+                        <img src="{{ project.image }}" alt="{{ project.title }}">
+                        <div class="category-badge">{{ project.category }}</div>
+                    </div>
+                    <div class="works-content">
+                        <h3>{{ project.title }}</h3>
+                        <p>{{ project.description }}</p>
+                        <a href="{{ project.link }}" class="works-link">View Project</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Add Free Resources Banner -->
+<section id="resources-banner" style="border-top: 2px solid black;">
+  <div class="container">
+    <div class="resources-content">
+      <div class="resources-text">
+        <h2>Love My Work?</h2>
+        <p>Explore a curated collection of premium design elements and web templates, handpicked for creatives—completely free.</p>
+      </div>
+      <a href="https://buymeacoffee.com/sauravd" class="btn-outline">Buy Me Coffee</a>
+    </div>
+  </div>
+</section>

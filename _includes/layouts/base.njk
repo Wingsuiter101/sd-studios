@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% if description %}{{ description }}{% else %}SD Studios - Design, Detail, Drive{% endif %}">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="{{ title | default('SD Studios') }} | SD Studios">
+    <meta property="og:description" content="{% if description %}{{ description }}{% else %}SD Studios - Design, Detail, Drive{% endif %}">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:image" content="{{ site.url }}{% if featured_image %}{{ featured_image }}{% else %}{{ metadata.default_image }}{% endif %}">
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/svg+xml" href="images/fav-icon.svg">
+    <!-- Optional: Add different sizes for better device support -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/fav-icon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="32x32" href="/images/fav-icon.svg">
+    <link rel="icon" type="image/svg+xml" sizes="16x16" href="/images/fav-icon.svg">
+    
+    <title>{{ title | default("SD Studios") }} | SD Studios</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/css/design-system.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    
+    
+    {% if layout == "layouts/project.njk" or page.url.includes('/works/') %}
+        <link rel="stylesheet" href="/css/projects.css">
+    {% endif %}
+    
+    {% if title == "works" %}
+        <link rel="stylesheet" href="/css/works.css">
+    {% endif %}
+    
+    {% if title == "contact" %}
+        <link rel="stylesheet" href="/css/contact.css">
+    {% endif %}
+    
+    {% if title == "about" %}
+        <link rel="stylesheet" href="/css/about.css">
+    {% endif %}
+
+    {% if title == "Gallery" %}
+        <link rel="stylesheet" href="/css/gallery.css">
+    {% endif %}
+
+    {% if title == "Free Design Resources" %}
+        <link rel="stylesheet" href="/css/resources.css">
+    {% endif %}
+
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="https://use.typekit.net/xhk7npq.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://use.typekit.net/xhk7npq.css"></noscript>
+
+    <!-- Basic Meta Tags -->
+    <meta name="description" content="{{ description or metadata.description }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ title or metadata.title }}">
+    <meta property="og:description" content="{{ description or metadata.description }}">
+    <meta property="og:image" content="{{ metadata.url }}{% if featured_image %}{{ featured_image }}{% else %}{{ metadata.default_image }}{% endif %}">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ metadata.url }}{{ page.url }}">
+    <meta name="twitter:title" content="{{ title or metadata.title }}">
+    <meta name="twitter:description" content="{{ description or metadata.description }}">
+    <meta name="twitter:image" content="{{ metadata.url }}{% if featured_image %}{{ featured_image }}{% else %}{{ metadata.default_image }}{% endif %}">
+</head>
+<body>
+    <!-- Skip to main content for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <!-- Header -->
+    {% include "partials/header.njk" %}
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        {{ content | safe }}
+    </main>
+    
+    <!-- Footer -->
+    {% include "partials/footer.njk" %}
+    
+    <!-- Core Scripts -->
+    <script src="/js/main.js" defer></script>
+    <script src="/js/ModernNav.js" defer></script>
+
+    <!-- Global Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+    
+    <!-- Page Specific Scripts -->
+    {% if title == "Home" %}
+        <!-- Home page scripts -->
+        <script src="/js/projects.js" defer></script>
+        <script src="/js/gallery-preview.js" defer></script>
+    {% endif %}
+    
+    {% if title == "works" %}
+        <!-- Works page scripts -->
+        <script src="/js/works.js" defer></script>
+    {% endif %}
+    
+    {% if layout == "layouts/project.njk" or page.url.includes('/works/') %}
+        <!-- Project detail page scripts -->
+        <script src="/js/project-gallery.js" defer></script>
+    {% endif %}
+
+    {% if title == "Gallery" %}
+        <!-- Gallery page scripts -->
+        <script src="/js/gallery.js" defer></script>
+    {% endif %}
+    
+    {% if title == "contact" %}
+        <!-- Contact page scripts -->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+        <script>
+            (function() {
+                emailjs.init("QE9KkYr17w2oPxDjo");
+            })();
+        </script>
+        <script src="/js/contact.js" defer></script>
+    {% endif %}
+    
+    <!-- Google Analytics or Other Analytics (Optional) -->
+    {% if site.googleAnalytics %}
+        <!-- Google Analytics Script -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAnalytics }}"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '{{ site.googleAnalytics }}');
+        </script>
+    {% endif %}
+</body>
+</html>

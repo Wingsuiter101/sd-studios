@@ -1,0 +1,380 @@
+@import 'design-system.css';
+
+/* Contact Section Styles */
+#contact {
+    padding: 0;
+    background-color: var(--color-background);
+  }
+  .contact-form-header {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: var(--text-4xl);
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  
+  .contact-container h1 {
+    font-family: var(--font-heading);
+    font-size: var(--text-5xl);
+    color: var(--color-primary);
+    text-align: center;
+    margin-top: 10rem;
+    margin-bottom: var(--spacing-md);
+    animation: slideDown 0.5s ease-out;
+  }
+  
+  .contact-container p {
+    text-align: center;
+    font-size: var(--text-xl);
+    color: var(--color-text);
+    margin-bottom: var(--spacing-2xl);
+    padding: 0 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.5s ease-out 0.1s backwards;
+  }
+  
+  /* Contact Cards Grid */
+  .contact-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: 0 2rem;
+    margin-bottom: var(--spacing-2xl);
+  }
+  
+  .contact-card {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-primary);
+    padding: var(--spacing-lg);
+    text-align: center;
+    box-shadow: -4px 4px 0px rgba(0, 0, 0, 1);
+    transition: all var(--transition-base);
+    animation: fadeIn 0.4s ease-out calc(var(--order, 0) * 0.1s) backwards;
+  }
+  
+  @keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: -6px 6px 0px rgba(0, 0, 0, 1);
+  }
+  
+  .contact-card h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .contact-card p {
+    font-size: var(--text-lg);
+    color: var(--color-text);
+    margin: 0;
+  }
+  
+  .contact-card a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color var(--transition-base);
+  }
+  
+  .contact-card a:hover {
+    color: var(--color-deep-teal);
+  }
+  
+  /* Contact Form */
+  #contact-form {
+    max-width: 100%;
+    padding: 4rem 2rem;
+    background-image: url(/images/hero-pattern.jpg);
+    margin: 0;
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 0.5s ease-out 0.3s backwards;
+  }
+  
+  #contact-inside {
+    padding: 2rem;
+    background-color: var(--color-off-white);
+    box-shadow: -8px 4px 0px rgba(0, 0, 0, 1);
+  }
+  
+  #contact-form label {
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    color: var(--color-primary);
+  
+  }
+  
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-white);
+    transition: all var(--transition-base);
+    margin-bottom: 1rem;
+    transform-origin: left;
+  }
+  
+  #contact-form input:focus,
+  #contact-form textarea:focus {
+    outline: none;
+    box-shadow: -4px 4px 0px rgba(0, 0, 0, 1);
+    transform: scale(1.01);
+  }
+  
+  #contact-form button {
+    width: 100%;
+    align-self: center;
+    padding: var(--spacing-sm) var(--spacing-xl);
+    font-family: var(--font-heading);
+    font-size: var(--text-lg);
+    font-weight: 600;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: none;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+  }
+  #contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: -4px 4px 0px rgba(0, 0, 0, 1);
+  }
+  
+  #contact-form button:active {
+    transform: translateY(0);
+    box-shadow: -2px 2px 0px rgba(0, 0, 0, 1);
+  }
+  
+  
+  /* Tablet Styles */
+  @media (min-width: 768px) {
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    #contact > .container > p {
+        font-size: var(--text-2xl);
+    }
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 1024px) {
+  
+    #contact h1 {
+        font-size: var(--text-6xl);
+    }
+  
+    .contact-container p {
+      padding: 0;
+    }
+    .contact-cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-lg);
+        padding: 2rem 20rem;
+    }
+  #contact-form {
+      max-width: 100%;
+      padding: 6rem 20rem;
+      background-image: url(/images/hero-pattern.jpg);
+      margin: 0;
+      box-sizing: content-box;
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+  
+    #contact-inside {
+      padding: 4rem 6rem ;
+      background: var(--color-off-white);
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  /* Form Enhancements */
+  .form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  
+  .char-count {
+    position: absolute;
+    right: 0;
+    bottom: -1.5rem;
+    font-size: var(--text-sm);
+    color: var(--color-text);
+    opacity: 0.7;
+  }
+  
+  /* Status Messages */
+  .status-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    text-align: center;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .status-message.error {
+    background-color: #ffe6e6;
+    color: #d63031;
+    border: 1px solid #ff7675;
+  }
+  
+  .status-message.success {
+    background-color: #e6ffe6;
+    color: #27ae60;
+    border: 1px solid #55efc4;
+  }
+  
+  .status-message.info {
+    background-color: #e6f3ff;
+    color: #0984e3;
+    border: 1px solid #74b9ff;
+  }
+  
+  /* Loading Spinner */
+  .loading-spinner {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid var(--color-white);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+  
+  @keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+  }
+  
+  /* Form Validation Styles */
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-white);
+    transition: all var(--transition-base);
+    margin-bottom: 1rem;
+    transform-origin: left;
+  }
+  
+  /* Only show invalid state after user interaction */
+  #contact-form input:not(:placeholder-shown):invalid,
+  #contact-form textarea:not(:placeholder-shown):invalid {
+    border-color: #ff7675;
+  }
+  
+  #contact-form input:valid,
+  #contact-form textarea:valid {
+    border-color: var(--color-primary);
+  }
+  
+  /* Button States */
+  #contact-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  
+  #contact-form button:disabled:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* reCAPTCHA Styling */
+  .g-recaptcha {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-shadow: -4px 4px 0px rgba(0, 0, 0, 1);
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--color-white);
+    padding: 0.5rem;
+    border: 2px solid var(--color-primary);
+    transition: all var(--transition-base);
+  }
+  
+  .g-recaptcha:hover {
+    transform: translateY(-2px);
+    box-shadow: -6px 6px 0px rgba(0, 0, 0, 1);
+  }
+  
+  /* Make reCAPTCHA responsive */
+  @media (max-width: 768px) {
+    .g-recaptcha {
+        transform: scale(0.9);
+        transform-origin: center;
+        margin: 1rem auto;
+    }
+    
+    .g-recaptcha:hover {
+        transform: scale(0.9) translateY(-2px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .g-recaptcha {
+        transform: scale(0.85);
+        transform-origin: center;
+        margin: 0.5rem auto;
+    }
+    
+    .g-recaptcha:hover {
+        transform: scale(0.85) translateY(-2px);
+    }
+  }
+  
+  

@@ -1,0 +1,200 @@
+@import 'design-system.css';
+
+/* Resources Page Styles */
+.resources-page {
+    background: var(--color-black) url('../images/gallery-bg.svg') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--color-white);
+    font-family: var(--font-body);
+}
+
+/* Hero Section */
+.resources-hero {
+    padding: var(--spacing-3xl) var(--spacing-md) var(--spacing-xl);
+    text-align: center;
+    background: transparent;
+}
+
+.resources-hero__content {
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+.resources-hero h1 {
+    font-family: var(--font-heading);
+    font-size: var(--text-5xl);
+    margin-top: 2rem;
+    margin-bottom: var(--spacing-sm);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.resources-hero p {
+    font-size: var(--text-base);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Resources Grid */
+.resources-grid {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: var(--spacing-md);
+}
+
+.resource-category {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.resource-category h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-xl);
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-xs);
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    letter-spacing: -0.01em;
+}
+
+.resource-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-sm);
+}
+
+.resource-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255, 255, 255, 0.322);
+    padding: var(--spacing-md);
+    text-decoration: none;
+    color: var(--color-white);
+    transition: all var(--transition-base);
+    backdrop-filter: blur(4px);
+    transition: backdrop-filter 0.3s ease;
+}
+
+.resource-card h3 {
+    font-family: var(--font-heading);
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--text-sm);
+    line-height: 1.3;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+.resource-card p {
+    margin: 0;
+    font-size: var(--text-sm);
+    opacity: 0.7;
+    line-height: 1.4;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+    .resources-hero {
+        padding: var(--spacing-3xl) var(--spacing-lg) var(--spacing-xl);
+    }
+
+    .resources-hero h1 {
+        font-size: clamp(var(--text-3xl), 4vw, var(--text-5xl));
+    }
+
+    .resources-hero p {
+        font-size: clamp(var(--text-base), 1.5vw, var(--text-lg));
+    }
+
+    .resources-grid {
+        padding: var(--spacing-lg);
+    }
+
+    .resource-category {
+        margin-bottom: var(--spacing-3xl);
+    }
+
+    .resource-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .resource-category h2 {
+        font-size: var(--text-2xl);
+    }
+}
+
+/* Desktop (1024px and up) */
+@media (min-width: 1024px) {
+    .resources-hero {
+        padding: var(--spacing-4xl) var(--spacing-lg) var(--spacing-xl);
+    }
+
+    .resources-hero h1 {
+        font-size: clamp(var(--text-4xl), 5vw, var(--text-6xl));
+    }
+
+    .resources-hero p {
+        font-size: clamp(var(--text-base), 2vw, var(--text-xl));
+    }
+
+    .resource-list {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: var(--spacing-md);
+    }
+
+    .resource-card h3 {
+        font-size: var(--text-lg);
+    }
+
+}
+
+/* Hover Effects - Only apply to devices that support hover */
+@media (hover: hover) {
+    .resource-card {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .resource-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -150%;
+        width: 25%;
+        height: 100%;
+        background: #ffffff;
+        transform: skewX(-30deg);
+        opacity: 0.5;
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
+        backface-visibility: hidden;
+        perspective: 1000;
+    }
+
+    .resource-card:hover {
+        background: rgba(255,255,255,0.08);
+        transform: translateY(-4px) scale(1.02);
+        border-color: rgba(255,255,255,0.3);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .resource-card:hover::before {
+        animation: shine 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .resource-card:active {
+        transform: translateY(-2px) scale(0.98);
+        transition-duration: 0.1s;
+    }
+
+    @keyframes shine {
+        100% {
+            left: 200%;
+        }
+    }
+}
+

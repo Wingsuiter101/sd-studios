@@ -1,0 +1,185 @@
+[
+  {
+    "title": "Grass Gurus",
+    "description": "Lawn care branding project.",
+    "image": "/images/grass-gurus/grass-gurus-cover.jpg",
+    "link": "/works/grass-gurus/",
+    
+    "category": "Branding",
+    "fullDescription": "A comprehensive branding project for a local lawn care company...",
+    "clientName": "Grass Gurus LLC",
+    "completionDate": "2024",
+    "services": ["Logo Design", "Brand Guidelines", "Business Cards"],
+    "gallery": [
+      "/images/grass-gurus/grass-gurus-1.jpg",
+      "/images/grass-gurus/grass-gurus-2.jpg",
+      "/images/grass-gurus/grass-gurus-3.jpg"
+    ],
+    "bodyText": "This is a detailed explanation of the project..."
+  },
+
+  {
+    "title": "Okami Dojo",
+    "description": "Logo and Website UI.",
+    "image": "/images/okami-dojo/okami-dojo-cover.jpg",
+    "link": "/works/okami-dojo/",
+    "prototypeLink": "/projects/prototype/index.html",
+    "category": "UI/UX",
+    "fullDescription": "A comprehensive Ui revamp for Okami Dojo.",
+    "clientName": "Okami Dojo",
+    "completionDate": "2024",
+    "services": ["Logo Design", "Brand Guidelines", "Business Cards"],
+    "gallery": [
+      "/images/okami-dojo/okami-dojo-1.jpg",
+      "/images/okami-dojo/okami-dojo-2.jpg",
+      "/images/okami-dojo/okami-dojo-3.jpg",
+      "/images/okami-dojo/okami-dojo-4.jpg"
+
+    ],
+    "bodyText": "The Okami Dojo website redesign was a complete overhaul aimed at creating a visually cohesive and user-focused platform to enhance engagement and usability. I handled the UI redesign, logo development, and prototyping in Figma, combining a bold color palette, structured visual hierarchy, and responsive design principles. Custom icons and illustrations were crafted to reinforce the brand's identity and unique character.\n\nThe redesign emphasized intuitive navigation, optimized call-to-actions, and a mobile-first approach, delivering a seamless experience for users while aligning with the mission of fostering discipline, self-defense, and personal growth through martial arts."
+  },
+
+  {
+    "title": "DH Fiber Net",
+    "description": "Motion Graphics AD",
+    "image": "/images/dh-fiber/dh-fiber-cover.jpg",
+    "link": "/works/dh-fiber-net/",
+    "category": "Motion Graphics",
+    "fullDescription": "A 2D motion graphics TVC promoting DH Fibernet during the Nepal Tri-Nation Cricket Series",
+    "clientName": "DH Fiber",
+    "completionDate": "2024",
+    "services": ["Motion Graphics", "Animation", "Sound Design"],
+    "gallery": [
+      "/images/dh-fiber/preview1.jpg",
+      "/images/dh-fiber/preview2.jpg"
+    ],
+    "videoUrl": "https://www.youtube.com/embed/JwsTOjaWHNo",  
+    "bodyText": "This 2D motion graphics TVC was developed for DH Fibernet to promote their internet packages during the Nepal Tri-Nation Cricket Series 2024. The project involved full-cycle production, including concept development, animation, sound design, and final editing.The animation style combines hand-drawn frame-by-frame elements with After Effects-based motion graphics. Techniques such as keyframe animation, dynamic transitions, and motion tracking were used to create seamless and engaging visuals.\n\nThe design incorporates cricket-themed assets and bold typography to align with the event's context and ensure the messaging is clear and impactful within a short runtime.The ad was optimized for TV broadcast, focusing on fast-paced, high-energy visuals that effectively communicate the offers while maintaining viewer engagement during match breaks."
+  },
+
+  {
+    "title": "AuteurEye",
+    "description": "Cinema related app",
+    "image": "/images/auteur-eye/auteur-cover.jpg",
+    "link": "/works/auteureye/",
+    "prototypeLink": "https://wingsuiter101.github.io/AuteurEye/",
+    "category": "Web App",
+    "fullDescription": "A comprehensive branding project for a local lawn care company...",
+    "clientName": "Okami Dojo",
+    "completionDate": "2024",
+    "services": ["Logo Design", "Brand Guidelines", "Business Cards"],
+    "gallery": [
+      "/images/auteur-eye/auteur-1.jpg",
+      "/images/auteur-eye/auteur-2.jpg",
+      "/images/auteur-eye/auteur-3.jpg",
+      "/images/auteur-eye/auteur-4.jpg"
+
+    ],
+    "bodyText": "This is a detailed explanation of the project..."
+  },
+
+  {
+    "title": "Tiki Data",
+    "description": "Football Related App",
+    "image": "/images/tiki-data/Tikidata-cover.jpg",
+    "link": "/works/tiki-data/",
+    "prototypeLink": "https://wingsuiter101.github.io/TikiData/",
+    "category": "Web App",
+    "fullDescription": "A comprehensive branding project for a local lawn care company...",
+    "clientName": "Junior Football Academy",
+    "completionDate": "2024",
+    "services": [
+        "UI/UX",
+         "App Development"
+
+    ],
+    "gallery": [
+        "/images/tiki-data/Tikidata-1.jpg",
+        "/images/tiki-data/Tikidata-2.jpg",
+        "/images/tiki-data/Tikidata-3.jpg",
+        "/images/tiki-data/Tikidata-4.jpg"
+    ],
+    "bodyText": "This project involved the creation of Tiki Data, a robust and feature-rich web application aimed at revolutionizing the way football tactics are taught and analyzed. Designed for football coaches, players, and analysts, Tiki Data provides a comprehensive suite of tools to simulate, visualize, and strategize various game scenarios.The app allows users to draw tactical plays with precision, using tools specifically created for passes, runs, and zone marking. Coaches can visually define team shapes and measure key metrics like team width and depth to better understand tactical formations.\nHeatmaps are integrated to analyze player positioning and movement trends, providing insights that were previously challenging to achieve.One of the standout features of Tiki Data is its ability to offer multiple predefined formations, such as 4-3-3 or 3-5-2, while also allowing users to create custom formations tailored to their team's style of play. All formations can be saved and revisited, streamlining the process of creating a library of tactical ideas.\nThe app also includes an animation timeline feature, enabling coaches to simulate match scenarios in a dynamic and visual manner. This feature is particularly beneficial for breaking down complex movements and strategies into digestible segments, making it easier for players to comprehend their roles on the field.\n\nTo ensure ease of use, the app's interface was designed with clarity and simplicity in mind. Despite its technical capabilities, the app remains highly intuitive, allowing users to focus on tactical creativity rather than being bogged down by complex workflows. Tiki Data combines powerful functionality with a sleek and minimalist design, making it a must-have tool for anyone involved in football strategy.\nBuilt using Vite and React, Tiki Data leverages a modern development stack for speed and efficiency. Tailwind CSS ensures a cohesive and customizable design system. ESLint integration maintains code quality and consistency. This technology stack ensures that Tiki Data remains scalable, maintainable, and performant, providing a seamless experience for end users.\nFrom planning training sessions to preparing for crucial matches, Tiki Data is the ultimate assistant for enhancing tactical awareness and execution."
+
+},
+  {
+    "title": "Soaltee F&B",
+    "description": "Showcasing Soaltee's F&B outlets.",
+    "image": "/images/soaltee/soaltee-cover.jpg",
+    "link": "/works/soaltee-f-b/",
+    
+    "category": "TVC",
+    "fullDescription": "A video showcasing the unique ambiance, culinary excellence, and luxury of The Soaltee Kathmandu's F&B outlets.",
+    "clientName": "The Soaltee Kathmandu",
+    "completionDate": "2024",
+    "services": ["Scripting", "Storyboarding", "Production Management", "Editing", "Sound Design", "Foley"],
+    "gallery": [
+      "/images/soaltee/soaltee-1.jpg",
+      "/images/soaltee/soaltee-2.jpg",
+      "/images/soaltee/soaltee-3.jpg",
+      "/images/soaltee/soaltee-4.jpg"
+    ],
+    "videoUrl": "https://player.vimeo.com/video/1045460848",  
+    "bodyText": "This project showcased the Food & Beverage outlets at The Soaltee Kathmandu, including Kakori, Bao Xuan, Rodi Bar, Terrace Garden, and Patio. I worked on this project as the Creative Director at BrandLogiq, overseeing scripting, storyboarding, and production management.\n\nIn post-production, I handled editing, sound design, and foley to deliver a polished final product that captured the luxury and excellence of each outlet, reflecting the prestige of The Soaltee Kathmandu."
+
+
+  },
+
+  {
+    "title": "Tsabinz",
+    "description": "Branding for tsabinz",
+    "image": "/images/tsabinz/tsabinz-cover.jpg",
+    "link": "/works/tsabinz", 
+    "category": "Branding",
+    "fullDescription": "[Add actual description here]",
+    "clientName": "Tsabinz",
+    "completionDate": "2024",
+    "services": ["Logo Design", "Brand Guidelines", "Business Cards"],
+    "gallery": [
+      "/images/tsabinz/tsabinz-cover.jpg",
+      "/images/tsabinz/tsabinz-1.jpg",
+      "/images/tsabinz/tsabinz-2.jpg",
+      "/images/tsabinz/tsabinz-3.jpg"
+    ],
+    "videoUrl": "https://player.vimeo.com/video/1048777713",  
+    "bodyText": "This is a detailed explanation of the project..."
+  },
+  {
+    "title": "Hi-Tex Carpet",
+    "description": "Branding for tsabinz",
+    "image": "/images//hi-tex-carpet/hitex-cover.jpg",
+    "link": "/works/hi-tex-carpet",
+    
+    "category": "TVC",
+    "fullDescription": "A comprehensive branding project for a local lawn care company...",
+    "clientName": "Hitex Carpet",
+    "completionDate": "2023",
+    "services": ["Direction", "Editing", "Compositing"],
+    "gallery": [
+      "/images/hi-tex-carpet/hitex-1.jpg",
+      "/images/hi-tex-carpet/hitex-2.jpg",
+      "/images/hi-tex-carpet/hitex-3.jpg",
+      "/images/hi-tex-carpet/hitex-4.jpg"
+    ],
+    "videoUrl": "https://player.vimeo.com/video/1049523686",  
+    "bodyText": "This is a detailed explanation of the project..."
+  },
+  {
+    "title": "ICB Branding",
+    "description": "icb-branding",
+    "image": "/images/icb-branding/icb-cover.jpg",
+    "link": "/works/icb-branding",
+    
+    "category": "Branding",
+    "fullDescription": "A comprehensive branding project for a local lawn care company...",
+    "clientName": "Okami Dojo",
+    "completionDate": "2024",
+    "services": ["Logo Design", "Brand Guidelines", "Business Cards"],
+    "gallery": [
+      "/images/icb-branding/icb-1.jpg",
+      "/images/grass-gurus/cards.jpg",
+      "/images/grass-gurus/guidelines.jpg"
+    ],
+    "bodyText": "This is a detailed explanation of the project..."
+  }
+]

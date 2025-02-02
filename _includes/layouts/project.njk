@@ -1,0 +1,109 @@
+---
+layout: layouts/base
+---
+<article class="project-detail">
+  <div class="container">
+    <header class="project-header">
+      <h1>{{ project.title }}</h1>
+      <p class="category">{{ project.category }}</p>
+    </header>
+
+    <div class="project-content">
+      <!-- Main Image/Video Container -->
+      <div class="project-main-image-container">
+        {% if project.videoUrl %}
+          <div class="video-embed-wrapper">
+            <div class="loading-placeholder">
+              <div class="loading-spinner"></div>
+            </div>
+            <iframe 
+              src="{{ project.videoUrl }}"
+              class="video-embed"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowfullscreen
+              onload="this.parentElement.classList.add('loaded')"
+            ></iframe>
+          </div>
+        {% else %}
+          <img 
+            src="{{ project.image }}" 
+            alt="{{ project.title }}" 
+            class="project-main-image"
+          >
+        {% endif %}
+      </div>
+      
+      <div class="project-info">
+        <div class="project-description">
+          <p>{{ project.fullDescription }}</p>
+        </div>
+
+        <div class="project-meta">
+          <h2>Project Details</h2>
+          <dl>
+            {% if project.clientName %}
+            <dt>Client</dt>
+            <dd>{{ project.clientName }}</dd>
+            {% endif %}
+
+            {% if project.completionDate %}
+            <dt>Completed</dt>
+            <dd>{{ project.completionDate }}</dd>
+            {% endif %}
+
+            {% if project.services.length > 0 %}
+            <dt>Services</dt>
+            <dd>
+              <ul>
+                {% for service in project.services %}
+                <li>{{ service }}</li>
+                {% endfor %}
+              </ul>
+            </dd>
+            {% endif %}
+          </dl>
+
+          {% if project.prototypeLink %}
+          <div class="prototype-link-container">
+            <a href="{{ project.prototypeLink }}" class="btn-prototype" target="_blank" rel="noopener noreferrer">
+              View Interactive Prototype
+            </a>
+          </div>
+          {% endif %}
+        </div>
+
+        {% if project.gallery and project.gallery.length > 0 %}
+        <div class="project-gallery">
+          <h2>Project Gallery</h2>
+          <div class="project-gallery-grid">
+            {% for image in project.gallery %}
+            <div class="project-gallery-item">
+              <img 
+                src="{% projectImage image %}" 
+                alt="{{ project.title }} - Gallery Image"
+                data-full-img="{% projectImage image %}"
+                class="gallery-img"
+              >
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if project.bodyText %}
+    <div class="project-body">
+      <h2>Project Overview</h2>
+      {% for paragraph in project.bodyText.split('\n\n') %}
+        <p>{{ paragraph | trim }}</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <nav class="project-navigation">
+      <a href="/works/" class="back-to-works">← Back to Works</a>
+    </nav>
+  </div>
+</article>

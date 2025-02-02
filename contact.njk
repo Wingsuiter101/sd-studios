@@ -1,0 +1,63 @@
+---
+layout: layouts/base.njk
+title: contact
+---
+<section id="contact">
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out for collaborations, inquiries, or just to say hi!</p>
+
+        <!-- Contact Info Cards -->
+        <div class="contact-cards">
+            <div class="contact-card">
+                <h3>Phone</h3>
+                <p>+1 (343) 297-3566</p>
+            </div>
+            <div class="contact-card">
+                <h3>Email</h3>
+                <p><a href="mailto:contact@sauravdh.com">contact@sauravdh.com<br>sauravdh101@gmail.com</br></a></p>
+            </div>
+            <div class="contact-card">
+                <h3>Address</h3>
+                <p>Nepean<br>Ottawa, ON, Canada</p>
+            </div>
+            <div class="contact-card">
+                <h3>Social Media</h3>
+                <p>
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a><br>
+                    <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a><br>
+                    <a href="https://behance.net/yourprofile" target="_blank">Behance</a>
+                </p>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <section id="contact-form">
+            <form id="contact-inside">
+                <div class="contact-form-header">Message me</div>
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="from_name" autocomplete="name" required placeholder=" ">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="reply_to" autocomplete="email" required placeholder=" ">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" autocomplete="off" required placeholder=" "></textarea>
+                    <div class="char-count"><span id="char-count">0</span>/1000</div>
+                </div>
+
+                <!-- Add reCAPTCHA here -->
+                <div class="g-recaptcha" data-sitekey="6LeAXMoqAAAAALMSwX5ODavXotCKsjRRljRHOPvX"></div>
+
+                <div id="form-status"></div>
+                <button type="submit" id="submit-btn">Send Message</button>
+            </form>
+        </section>
+    </div>
+</section>

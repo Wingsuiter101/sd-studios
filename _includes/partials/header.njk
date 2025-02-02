@@ -1,0 +1,67 @@
+<header class="main-header">
+  <div class="main-header__container">
+    <!-- Logo -->
+    <a href="/" class="main-header__logo" aria-label="Return to homepage">
+      <img src="/images/Header-logo.svg" alt="SD Studios">
+    </a>
+
+    <!-- Mobile Menu Button -->
+    <button class="main-header__mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <i class="fas fa-bars" aria-hidden="true"></i>
+      <i class="fas fa-xmark" aria-hidden="true"></i>
+    </button>
+
+    <!-- Navigation Wrapper -->
+    <div class="main-header__nav-wrapper">
+      <!-- Desktop Menu -->
+      <nav class="main-header__desktop-nav">
+        <ul class="main-header__desktop-list">
+          <li><a href="/" class="main-header__desktop-link" {{ 'aria-current=page' if page.url === '/' }}>Home</a></li>
+          <li><a href="/about/" class="main-header__desktop-link" {{ 'aria-current=page' if page.url === '/about/' }}>About</a></li>
+          <li><a href="/works/" class="main-header__desktop-link" {{ 'aria-current=page' if page.url === '/works/' }}>Works</a></li>
+          <li><a href="/gallery/" class="main-header__desktop-link" {{ 'aria-current=page' if page.url === '/gallery/' }}>Gallery</a></li>
+          <li><a href="/contact/" class="main-header__desktop-link" {{ 'aria-current=page' if page.url === '/contact/' }}>Connect</a></li>
+        </ul>
+      </nav>
+
+      <!-- Desktop CTA -->
+      <a href="/contact/" class="main-header__cta main-header__cta--desktop">Start a Project</a>
+
+      <!-- Mobile Menu -->
+      <nav class="main-header__mobile-nav">
+        <!-- Up Arrow -->
+        <button class="main-header__scroll-arrow main-header__scroll-up">
+          <i class="fas fa-chevron-up" aria-hidden="true"></i>
+        </button>
+
+        <!-- Carousel -->
+        <div class="main-header__carousel">
+          <ul class="main-header__carousel-list">
+            <!-- Clone items (top) - last 2 items from main list -->
+            <li class="main-header__carousel-item main-header__clone"><a href="/gallery/" class="main-header__carousel-link">Gallery</a></li>
+            <li class="main-header__carousel-item main-header__clone"><a href="/contact/" class="main-header__carousel-link">Connect</a></li>
+
+            <!-- Main items - 5 items -->
+            <li class="main-header__carousel-item"><a href="/" class="main-header__carousel-link" {{ 'aria-current=page' if page.url === '/' }}>Home</a></li>
+            <li class="main-header__carousel-item"><a href="/about/" class="main-header__carousel-link" {{ 'aria-current=page' if page.url === '/about/' }}>About</a></li>
+            <li class="main-header__carousel-item"><a href="/works/" class="main-header__carousel-link" {{ 'aria-current=page' if page.url === '/works/' }}>Works</a></li>
+            <li class="main-header__carousel-item"><a href="/gallery/" class="main-header__carousel-link" {{ 'aria-current=page' if page.url === '/gallery/' }}>Gallery</a></li>
+            <li class="main-header__carousel-item"><a href="/contact/" class="main-header__carousel-link" {{ 'aria-current=page' if page.url === '/contact/' }}>Connect</a></li>
+
+            <!-- Clone items (bottom) - first 2 items from main list -->
+            <li class="main-header__carousel-item main-header__clone"><a href="/" class="main-header__carousel-link">Home</a></li>
+            <li class="main-header__carousel-item main-header__clone"><a href="/about/" class="main-header__carousel-link">About</a></li>
+          </ul>
+        </div>
+
+        <!-- Down Arrow -->
+        <button class="main-header__scroll-arrow main-header__scroll-down">
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </button>
+
+        <!-- Mobile CTA -->
+        <a href="/contact/" class="main-header__cta main-header__cta--mobile">Start a Project</a>
+      </nav>
+    </div>
+  </div>
+</header>

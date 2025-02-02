@@ -1,0 +1,146 @@
+---
+layout: layouts/base
+title: Home
+---
+<section class="sd-hero">
+  <div class="sd-hero__wrapper" role="region" aria-label="Hero section">
+    <div class="sd-hero__content">
+      <div class="sd-hero__text-block">
+        <h1 class="sd-hero__heading">
+          <span class="sd-hero__heading-line">DESIGN.</span>
+          <span class="sd-hero__heading-line">DETAIL<span class="sd-hero__accent">.</span></span>
+          <span class="sd-hero__heading-line">DRIVE.</span>
+        </h1>
+        <a href="/about/" class="sd-hero__cta">Start a Project</a>
+      </div>
+      
+      <div class="sd-hero__visual">
+        <img src="images/hero-float.png" alt="" class="sd-hero__image" aria-hidden="true">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="about">
+    <div class="container">
+        <!-- Group the heading and image together -->
+        <div class="about-header">
+            <h2>About Me</h2>
+            <img src="/images/about-me.jpg" alt="Saurav Dhungana" class="profile-pic">
+        </div>
+        <!-- Separate container for the text -->
+        <div class="about-text">
+            <p>I'm a Interactive Media specialist with over a decade of expertise in <b>Front-end development, Graphic Design, Branding, UI/UX design, Motion Graphics, Production</b> and more. My work blends bold minimalism and refined functionality, delivering impactful visuals and seamless digital experiences.</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2>Latest Projects</h2>
+        <div class="projects-carousel" role="region" aria-label="Projects carousel">
+<div class="projects-track">
+    {% for project in collections.projects | homeProjects %}
+    <div class="project-slide">
+        <div class="project-card">
+            <div class="project-image">
+                <img src="{{ project.image }}" alt="{{ project.title }}">
+            </div>
+            <div class="project-elements">
+                <h3>{{ project.title }}</h3>
+                <p>{{ project.description }}</p>
+                <div class="project-footer">
+                    <span class="project-category">{{ project.category }}</span>
+                    <a href="{{ project.link }}" class="project-link">Explore</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+            <button class="carousel-prev" aria-label="Previous project">‹</button>
+            <button class="carousel-next" aria-label="Next project">›</button>
+            
+            <div class="carousel-nav">
+                <div class="carousel-dots"></div>
+            </div>
+        </div>
+        <a href="/works/" class="btn">Browse All</a>
+    </div>
+</section>
+
+<section id="gallery-preview">
+    <div class="container">
+        <h1>Gallery</h1>
+        <p>Explore my photo collections</p>
+
+        {# Embed gallery data for JavaScript #}
+        <script type="application/json" id="gallery-preview-data">
+            {{ collections.galleryData | stringify | safe }}
+        </script>
+
+        <div class="gallery-grid">
+            {% for album in gallery.albums.slice(0,4) %}
+            <div class="gallery-item" data-album-id="{{ album.id }}" role="button" tabindex="0" aria-label="View {{ album.title }} album">
+                <div class="gallery-item-inner">
+                    <img 
+                        src="{{ album.coverImage }}" 
+                        alt="{{ album.title }}"
+                        loading="lazy"
+                    >
+                    <div class="gallery-overlay">
+                        <h3 class="gallery-album-title">{{ album.title }}</h3>
+                        <p class="gallery-text">{{ album.description }}</p>
+                        <span class="gallery-photo-count">{{ album.photos.length }} Photos</span>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/gallery/" class="btn">View All Albums</a>
+    </div>
+
+<div class="album-modal" id="album-modal" hidden>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title"></h2>
+            <button class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </button>
+        </div>
+        <div class="photos-grid">
+            {# Photos will be dynamically inserted here #}
+        </div>
+    </div>
+</div>
+
+{# Lightbox - Matches gallery.njk exactly #}
+<div class="lightbox" id="lightbox" hidden>
+    <button class="close-button" aria-label="Close lightbox">
+        <i class="fas fa-xmark"></i>
+    </button>
+    <div class="lightbox-content">
+        <img src="" alt="">
+    </div>
+    <button class="nav-button prev" aria-label="Previous photo">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="nav-button next" aria-label="Next photo">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>
+</section>
+<!-- Add Free Resources Banner -->
+<section id="resources-banner">
+  <div class="container">
+    <div class="resources-content">
+      <div class="resources-text">
+        <h2>Resources Collection</h2>
+        <p>Explore a curated collection of premium design elements, resources and more, handpicked for creatives.</p>
+      </div>
+      <a href="/resources" class="btn-outline">View Now</a>
+    </div>
+  </div>
+</section>

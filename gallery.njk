@@ -1,0 +1,129 @@
+---
+layout: layouts/base
+title: Gallery
+styles: ["/css/gallery.css"]
+---
+
+<main class="photo-gallery">
+    {# Hero Section #}
+    <section class="photo-hero">
+        {% if gallery and gallery.albums and gallery.albums.length > 0 %}
+            {# Only create slides for featured albums #}
+            {% set featuredAlbums = [] %}
+            {% for album in gallery.albums %}
+                {% if album.featured %}
+                    {% set featuredAlbums = (featuredAlbums.push(album), featuredAlbums) %}
+                {% endif %}
+            {% endfor %}
+            {% for album in featuredAlbums %}
+                <img src="{{ album.coverImage }}" 
+                     alt="{{ album.title }}"
+                     class="hero-background-image {% if loop.first %}active{% endif %}"
+                     loading="{% if loop.first %}eager{% else %}lazy{% endif %}">
+            {% endfor %}
+            <div class="photo-hero__image"></div>
+        {% endif %}
+        <div class="photo-hero__content">
+            <h1 class="photo-hero__title">Photography Portfolio</h1>
+            <p class="photo-hero__subtitle">View my Photography Collection</p>
+        </div>
+    </section>
+
+    {# Filter Section #}
+    <section class="photo-filter">
+        <div class="photo-filter__container">
+            <button class="photo-filter__btn active" data-filter="all">All Projects</button>
+            {% if gallery and gallery.albums %}
+                {% set categories = [] %}
+                {% for album in gallery.albums %}
+                    {% if album.category and not categories.includes(album.category | lower) %}
+                        {% set categories = (categories.push(album.category | lower), categories) %}
+                    {% endif %}
+                {% endfor %}
+                {% for category in categories %}
+                    <button class="photo-filter__btn" data-filter="{{ category }}">
+                        {{ category | title }}
+                    </button>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+
+    {# Gallery Heading Section #}
+    <section class="gallery-heading">
+        <h2 class="gallery-heading__title">Photo Collections</h2>
+        <p class="gallery-heading__description">Explore my curated collection of photographic works across various themes and styles.</p>
+    </section>
+
+    {# Gallery Grid Section #}
+    <section class="photo-grid">
+        <div class="photo-grid__container">
+            {% if gallery and gallery.albums %}
+                {% for album in gallery.albums %}
+                    <div class="photo-grid__item" 
+                         data-category="{{ album.category | lower }}" 
+                         data-album-id="{{ album.id }}">
+                        <img class="photo-grid__image" 
+                             src="{{ album.coverImage }}" 
+                             alt="{{ album.title }}"
+                             loading="lazy">
+                        <div class="photo-grid__overlay">
+                            <h2 class="photo-grid__title">{{ album.title }}</h2>
+                            <p class="photo-grid__description">{{ album.description }}</p>
+                            <span class="photo-grid__count">{{ album.photos | length }} Photos</span>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        </div>
+    </section>
+
+    {# Pagination Section - Completely separate #}
+    <section class="pagination-section">
+        <div class="pagination"></div>
+    </section>
+</main>
+
+{# Add this modal HTML right before the lightbox #}
+<div class="album-modal" id="album-modal" hidden>
+    <div class="modal-content">
+        <div class="modal-header">
+            <h2 class="modal-title"></h2>
+            <button class="back-button">
+                <i class="fas fa-arrow-left"></i> Back
+            </button>
+        </div>
+        <div class="photos-grid">
+            {# Photos will be dynamically inserted here #}
+        </div>
+        <div class="pagination">
+            {# Pagination will be dynamically inserted here #}
+        </div>
+    </div>
+</div>
+
+<div class="lightbox" id="lightbox" hidden>
+    <button class="close-button" aria-label="Close lightbox">
+        <i class="fas fa-xmark"></i>
+    </button>
+    <div class="lightbox-content">
+        <img src="" alt="">
+    </div>
+    <button class="nav-button prev" aria-label="Previous photo">
+        <i class="fas fa-chevron-left"></i>
+    </button>
+    <button class="nav-button next" aria-label="Next photo">
+        <i class="fas fa-chevron-right"></i>
+    </button>
+</div>
+
+{# Add this temporarily for debugging #}
+<script>
+console.log('Gallery data available:', {{ gallery | dump | safe }});
+</script>
+
+{% if gallery %}
+<script id="photo-data" type="application/json">
+{{ gallery | dump | safe }}
+</script>
+{% endif %}

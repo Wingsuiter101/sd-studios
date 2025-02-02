@@ -1,0 +1,9 @@
+---
+pagination:
+  data: collections.projects
+  size: 1
+  alias: project
+  addAllPagesToCollections: true
+permalink: "works/{{ project.title | slugify }}{{ pagination.index }}/index.html"
+layout: layouts/project.njk
+---
