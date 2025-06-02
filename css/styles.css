@@ -157,7 +157,7 @@
   background: var(--color-white);
   padding-top: var(--header-height);
   transform: translateX(100%);
-  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0s 0.6s;
   visibility: hidden;
   z-index: var(--z-header);
   overflow: hidden;
@@ -178,8 +178,9 @@
   transform: scale(0.8) translateY(var(--offset, 0));
   z-index: 1;
   will-change: transform, opacity, font-size, z-index;
-  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1),
-              opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .main-header__carousel-item.visible {
@@ -187,8 +188,9 @@
   visibility: visible;
   pointer-events: auto;
   transform: scale(1) translateY(var(--offset, 0));
-  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1),
-              opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .main-header__carousel-item.active {
@@ -197,10 +199,10 @@
   pointer-events: auto;
   transform: scale(1) translateY(var(--offset, 0));
   height: 80px;
-  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1),
-              opacity 0.6s cubic-bezier(0.33, 1, 0.68, 1),
-              height 0.5s cubic-bezier(0.33, 1, 0.68, 1),
-              font-size 0.5s cubic-bezier(0.33, 1, 0.68, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              height 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              font-size 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 2;
 }
 
@@ -213,12 +215,12 @@
 .main-header.menu-open .main-header__nav-wrapper {
   transform: translateX(0);
   visibility: visible;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0s;
 }
 
 /* Add visibility transition only when closing */
 .main-header:not(.menu-open) .main-header__nav-wrapper {
-  transition: transform var(--transition-base),
-              visibility 0s var(--transition-base); /* Delay visibility until after slide */
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0s 0.6s;
 }
 
 /* Mobile Menu */
@@ -433,13 +435,12 @@
     background: var(--color-soft-teal);
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform var(--transition-base);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .main-header__desktop-link:hover::after,
   .main-header__desktop-link[aria-current="page"]::after {
     transform: scaleX(1);
-    transform-origin: left;
   }
 
   .main-header__cta--mobile {
@@ -1699,7 +1700,7 @@ body.menu-open {
   background: var(--color-white);
   padding-top: var(--header-height);
   transform: translateX(100%);
-  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0s 0.6s;
   visibility: hidden;
   z-index: var(--z-header);
   overflow: hidden;
@@ -1814,6 +1815,8 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
 }
 
 
@@ -1829,12 +1832,15 @@ main {
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
   margin-bottom: var(--spacing-xs);
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
 }
 
 #gallery-preview p {
   font-size: var(--text-lg);
   margin-bottom: var(--spacing-xl);
-  opacity: 0.9;
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s forwards;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -1846,6 +1852,8 @@ main {
   grid-template-columns: 1fr;
   gap: var(--spacing-xs);
   margin-bottom: var(--spacing-lg);
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.9s forwards;
 }
 
 /* Hide items beyond the first 4 */
@@ -1861,6 +1869,9 @@ main {
   transition: all var(--transition-base);
   cursor: pointer;
   overflow: hidden;
+  transform: translateY(30px);
+  opacity: 0;
+  animation: fadeInStagger 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 .gallery-item-inner {
@@ -1958,6 +1969,8 @@ main {
   border: 2px solid var(--color-white);
   transition: all var(--transition-base);
   margin-top: var(--spacing-lg);
+  opacity: 0;
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 1.4s forwards;
 }
 
 /* Tablet Styles (768px to 1023px) */
@@ -2438,4 +2451,248 @@ body.modal-open {
     padding-right: var(--scrollbar-width, 0px);
     -webkit-overflow-scrolling: touch;
     overscroll-behavior: none;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Adding sleeker animations */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInStagger {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Enhanced Hero Section Animations */
+.sd-hero__heading-line:nth-child(1) {
+  animation: fadeInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+}
+
+.sd-hero__heading-line:nth-child(2) {
+  animation: fadeInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+  opacity: 0;
+}
+
+.sd-hero__heading-line:nth-child(3) {
+  animation: fadeInLeft 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s forwards;
+  opacity: 0;
+}
+
+.sd-hero__accent {
+  animation: scaleIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+  display: inline-block;
+  opacity: 0;
+  transform-origin: center;
+}
+
+.sd-hero__cta {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s forwards;
+  opacity: 0;
+}
+
+.sd-hero__visual {
+  animation: fadeInRight 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards, 
+             floatAnimation 6s ease-in-out 1.5s infinite;
+  opacity: 0;
+}
+
+/* About Section Animations */
+#about::before,
+#about::after {
+  animation: scaleIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.2s forwards;
+  opacity: 0;
+}
+
+.about-header h2 {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+  opacity: 0;
+}
+
+.profile-pic {
+  animation: scaleIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+  opacity: 0;
+}
+
+.about-text p {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.7s forwards;
+  opacity: 0;
+}
+
+/* Projects Section Animations */
+#projects h2 {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+  opacity: 0;
+}
+
+.projects-carousel {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s forwards;
+  opacity: 0;
+}
+
+.project-slide {
+  animation: fadeInStagger 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  opacity: 0;
+}
+
+.project-slide:nth-child(1) { animation-delay: 0.6s; }
+.project-slide:nth-child(2) { animation-delay: 0.7s; }
+.project-slide:nth-child(3) { animation-delay: 0.8s; }
+.project-slide:nth-child(4) { animation-delay: 0.9s; }
+.project-slide:nth-child(5) { animation-delay: 1.0s; }
+
+/* Resources Banner Animation */
+#resources-banner {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s forwards;
+  opacity: 0;
+}
+
+/* Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+  .sd-hero__heading-line,
+  .sd-hero__accent,
+  .sd-hero__cta,
+  .sd-hero__visual,
+  #about::before,
+  #about::after,
+  .about-header h2,
+  .profile-pic,
+  .about-text p,
+  #projects h2,
+  .projects-carousel,
+  .project-slide,
+  #resources-banner,
+  #gallery-preview,
+  #gallery-preview h2,
+  #gallery-preview p,
+  .gallery-grid,
+  .gallery-item,
+  #gallery-preview .btn {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  .sd-hero__visual {
+    transform: none !important;
+  }
+}
+
+/* Page Transition Effect */
+body {
+  opacity: 0;
+  animation: pageTransitionIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes pageTransitionIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Add the page transition to reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  body,
+  .sd-hero__heading-line,
+  .sd-hero__accent,
+  .sd-hero__cta,
+  .sd-hero__visual,
+  #about::before,
+  #about::after,
+  .about-header h2,
+  .profile-pic,
+  .about-text p,
+  #projects h2,
+  .projects-carousel,
+  .project-slide,
+  #resources-banner,
+  #gallery-preview,
+  #gallery-preview h2,
+  #gallery-preview p,
+  .gallery-grid,
+  .gallery-item,
+  #gallery-preview .btn {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  .sd-hero__visual {
+    transform: none !important;
+  }
+}
+
+/* Scroll-based Animation Helpers */
+.animate-in {
+  animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+/* Helper class for reduced motion preference */
+.reduced-motion * {
+  animation: none !important;
+  transition: none !important;
+  transform: none !important;
+  opacity: 1 !important;
 }
